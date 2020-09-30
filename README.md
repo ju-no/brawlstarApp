@@ -62,3 +62,55 @@ cd /app
 composer install
 sh bin/cake migrations migrate
 ```
+
+## memo
+
+docker container run $dockerId/hello-world
+
+docker image push $dockerId/hello-world
+
+****
+chmod -R 777 tmp
+chmod -R 777 logs
+are 
+ icacls tmp /grant:r Everyone:F /t
+ icacls logs /grant:r Everyone:F /t
+in powershell
+
+****
+$docker ps -a
+if container is working?
+
+$docker exec -i -t mysql_BS bash
+access to container
+
+$mysql -u root -p 
+access to mysql server
+
+$docker start mysql_BS
+from now on to start container
+
+TODO
+check docker file &
+docker-compose.yml
+DB setting on cakePHP
+
+set docker apache web server
+connect mysql to docker
+
+
+Q
+how to use json web token
+COCappProject (origin)
+-cakephp (origin)
+-docker
+cannot push
+
+6/5
+how to write docker-composeyml 
+you got to explain 
+
+brwalstats -> tool
+ JWT ->  official manual.
+ how to
+curl -X GET --header 'Accept: application/json' --header "authorization: Bearer <API token>" 'https://api.brawlstars.com/v1/brawlers/0'

@@ -1,6 +1,7 @@
 version: '3'
 services:
   php:
+    image: php:7.4-apache
     build: ./docker/php/
     ports:
       - 80:80
@@ -9,11 +10,12 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: powerov1
-      MYSQL_DATABASE: brawlStarts
-      MYSQL_USER: juno
-      MYSQL_PASSWORD: powerov1
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - ./docker/mysql/conf.d:/etc/mysql/conf.d
+    restart: always
     ports:
       - 3306:3306

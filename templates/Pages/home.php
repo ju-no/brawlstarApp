@@ -38,6 +38,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
+        GET /players/{playerTag}/battlelog
     </title>
     <?= $this->Html->meta('icon') ?>
 
